@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhostlyStore - Best Seller</title>
+    
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ============================================
+         PARTÍCULAS ANIMADAS
+    ============================================ -->
+    <div id="particles-container"></div>
+
+    <!-- ============================================
+         MODAL SOBRE NOSOTROS
+    ============================================ -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>👻 Sobre Nosotros - Ghostly Store</h2>
+            <p class="intro">En <strong>Ghostly Store</strong>, creemos que el entretenimiento y la experiencia digital de calidad no deberían tener límites.</p>
+            
+            <p>Somos una tienda especializada en ofrecerte cuentas premium de tus plataformas favoritas, desde videojuegos hasta servicios de streaming. Aquí encontrarás acceso seguro y confiable a:</p>
+
+            <ul class="services-list">
+                <li>🎮 Minecraft Java & Bedrock</li>
+                <li>🎬 Netflix, Disney+, Crunchyroll, HBO Max, Prime Video</li>
+                <li>🎧 Spotify Premium, Deezer, YouTube Premium</li>
+            </ul>
+            
+            <h3>🚀 ¿Por qué elegir Ghostly Store?</h3>
+            <ul class="benefits-list">
+                <li><strong>Entregas rápidas:</strong> Recibe tus cuentas en minutos.</li>
+                <li><strong>Soporte garantizado:</strong> Nuestro equipo está listo para ayudarte ante cualquier inconveniente.</li>
+                <li><strong>Precios accesibles:</strong> Disfruta contenido premium sin pagar de más.</li>
+                <li><strong>100% confiable:</strong> Cientos de clientes satisfechos nos respaldan.</li>
+            </ul>
+            
+            <h3>🌙 Nuestra misión</h3>
+            <p>En <strong>Ghostly Store</strong> trabajamos para que el acceso al entretenimiento digital esté al alcance de todos, sin complicaciones ni precios elevados. Queremos que juegues, veas y escuches lo que amas sin límites.</p>
+            
+            <p class="contact-text">¿Tienes dudas o necesitas ayuda con tu compra? Estamos disponibles para ti en nuestras redes y por WhatsApp 👻</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL FAQ
+    ============================================ -->
+    <div id="faq-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>❓ Preguntas Frecuentes (FAQ)</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cuánto tarda en llegar mi cuenta después de comprar?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Generalmente entregamos tu cuenta en cuestión de minutos. En algunos casos, puede tardar hasta 15 minutos si hay alta demanda. ¡Siempre recibirás tu producto lo más rápido posible! ⚡</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué pasa si mi cuenta deja de funcionar?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡No te preocupes! Todas nuestras cuentas tienen garantía. Si tu cuenta presenta algún problema, contáctanos por WhatsApp o Discord y te daremos una solución inmediata, ya sea reemplazándola o reembolsándote. 🛡️</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Las cuentas son personales o compartidas?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Dependiendo del producto, ofrecemos ambas opciones. Las cuentas personales son de uso exclusivo para ti, mientras que las compartidas tienen un precio más accesible. Cada producto indica claramente el tipo de cuenta. 📋</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué métodos de pago aceptan?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceptamos múltiples métodos de pago para tu comodidad: PayPal, transferencias bancarias, criptomonedas y más. Contáctanos para conocer todas las opciones disponibles en tu país. 💳</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo sé que Ghostly Store es confiable?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Contamos con cientos de clientes satisfechos y reseñas positivas en nuestras redes sociales. Además, ofrecemos garantía en todos nuestros productos y soporte 24/7. ¡Tu satisfacción es nuestra prioridad! ⭐</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="contact-text">¿Tienes más preguntas? ¡Contáctanos por WhatsApp o Discord! 👻</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL REVIEWS
+    ============================================ -->
+    <div id="reviews-modal" class="modal">
+        <div class="modal-content modal-reviews">
+            <span class="modal-close">&times;</span>
+            <h2>⭐ Reviews</h2>
+            <p class="reviews-question">¿Qué opinan nuestros usuarios de nuestros productos?</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         MODAL PRODUCTO
+    ============================================ -->
+    <div id="producto-modal" class="modal">
+        <div class="modal-content modal-producto">
+            <span class="modal-close">&times;</span>
+            <div class="producto-modal-container">
+                <div class="producto-modal-galeria">
+                    <div class="producto-modal-thumbs">
+                        <img src="" alt="Thumb 1" class="thumb-img active">
+                    </div>
+                    <div class="producto-modal-imagen-principal">
+                        <img src="" alt="Producto" id="modal-imagen-principal">
+                    </div>
+                </div>
+                <div class="producto-modal-info">
+                    <h2 id="modal-producto-nombre">Nombre del Producto</h2>
+                    <div class="modal-producto-precio" id="modal-producto-precio">$0.00 USD</div>
+                    
+                    <ul class="modal-producto-features">
+                        <li>› Minecraft Java & Bedrock permanente (29.99$).</li>
+                        <li>› Compra garantizada y segura.</li>
+                    </ul>
+                    
+                    <button class="modal-btn-comprar">¡Compra en nuestras redes!</button>
+                    
+                    <div class="modal-social-links">
+                        <a href="#" title="WhatsApp" class="modal-social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" title="Instagram" class="modal-social-btn instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Discord" class="modal-social-btn discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HEADER
+    ============================================ -->
+    <header>
+        <div class="logo">GhostlyStore</div>
+        <nav>
+            <a href="#about">Sobre nosotros</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#login" class="login">Login</a>
+            <a href="#register" class="register">Register</a>
+        </div>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+    ============================================ -->
+    <section class="hero-section">
+        <h1 class="hero-title">GHOSTLY STORE</h1>
+        <p class="hero-subtitle">Accede al lado oscuro del entretenimiento... Sin vender tu alma. 👻</p>
+        
+        <!-- Divisor de ondas elegante -->
+        <div class="wave-mountains">
+            <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+                <!-- Solo la línea de la onda con animación -->
+                <path d="M0,100 C200,140 350,40 500,80 C650,120 750,60 900,90 C1050,120 1150,50 1300,80 C1380,100 1420,70 1440,85" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="3" class="wave-line"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN BEST SELLER
+    ============================================ -->
+    <div class="container">
+        <h1>Best Seller</h1>
+
+        <div class="product-section">
+            <div class="product-image">
+                <!-- La imagen está en la carpeta imagenes -->
+                <img src="imagenes/minecraft-imagen.png" alt="Minecraft Java & Bedrock">
+            </div>
+
+            <div class="product-info">
+                <h2>Minecraft Java & Bedrock</h2>
+                <div class="price">$7 USD</div>
+                
+                <ul class="features">
+                    <li>Minecraft Java & Bedrock PERMANENTE (29.99$)</li>
+                    <li>Cambio de nick DISPONIBLE</li>
+                    <li>Incluye garantía PERMANENTE</li>
+                    <li>Incluye una, dos o más capas</li>
+                </ul>
+
+                <button class="buy-button">¡Compra en nuestras redes!</button>
+                
+                <!-- Redes sociales dentro de product-info -->
+                <div class="social-links-product">
+                    <a href="#whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#discord" title="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         SECCIÓN DE PRODUCTOS
+    ============================================ -->
+    <section class="productos-section">
+        <div class="productos-container">
+            <h2>Productos</h2>
+
+            <!-- Categorías -->
+            <div class="categorias">
+                <button class="categoria-btn active" data-category="minecraft">Minecraft</button>
+                <button class="categoria-btn" data-category="streaming">Streaming</button>
+                <button class="categoria-btn" data-category="supercell">Supercell</button>
+                <button class="categoria-btn" data-category="fortnite">Fortnite</button>
+                <button class="categoria-btn" data-category="freefire">Free Fire</button>
+                <button class="categoria-btn" data-category="otros">Otros</button>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="productos-grid">
+                <!-- Producto 1 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft1.png" alt="Minecraft Account" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Premium Account</div>
+                        <div class="producto-precio">$7.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 2 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft2.png" alt="Minecraft Java" class="skin-img" data-hover="imagenes/minecraft2b.png" data-original="imagenes/minecraft2.png">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Java Edition</div>
+                        <div class="producto-precio">$5.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 3 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft3.png" alt="Minecraft Bedrock" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Bedrock Edition</div>
+                        <div class="producto-precio">$5.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 4 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft4.png" alt="Minecraft Full Access" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Full Access</div>
+                        <div class="producto-precio">$9.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 5 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft5.png" alt="Minecraft Hypixel" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Hypixel Rank</div>
+                        <div class="producto-precio">$12.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 6 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft6.png" alt="Minecraft Cape" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Capa Migrator</div>
+                        <div class="producto-precio">$4.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 7 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft7.png" alt="Minecraft Optifine" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Optifine Cape</div>
+                        <div class="producto-precio">$8.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 8 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft8.png" alt="Minecraft NFA" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | NFA Account</div>
+                        <div class="producto-precio">$3.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 9 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft9.png" alt="Minecraft SFA" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | SFA Account</div>
+                        <div class="producto-precio">$6.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 10 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft10.png" alt="Minecraft Realms" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Realms Plus</div>
+                        <div class="producto-precio">$11.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 11 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft11.png" alt="Minecraft Minecoins" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Minecoins 1000</div>
+                        <div class="producto-precio">$7.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 12 - Minecraft -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/minecraft12.png" alt="Minecraft Bundle" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">MC STOCK | Bundle Pack</div>
+                        <div class="producto-precio">$19.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Crunchyroll Plan Mensual Perfil Privado -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/crunchyroll.png" alt="Crunchyroll" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">PLAN MENSUAL MEGAFAN (Perfil privado)</div>
+                        <div class="producto-precio">$2 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Crunchyroll Plan Mensual Cuenta Completa -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/crunchyroll.png" alt="Crunchyroll" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">PLAN MENSUAL MEGAFAN – CUENTA COMPLETA</div>
+                        <div class="producto-precio">$4 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Crunchyroll Plan Anual Cuenta Completa -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/crunchyroll.png" alt="Crunchyroll" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">PLAN ANUAL MEGAFAN – CUENTA COMPLETA</div>
+                        <div class="producto-precio">$10 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Spotify Plan 1 Mes -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/spotify.png" alt="Spotify" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Spotify Premium – PLAN 1 MES</div>
+                        <div class="producto-precio">$3 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Spotify Plan 3 Meses -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/spotify.png" alt="Spotify" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Spotify Premium – PLAN 3 MESES</div>
+                        <div class="producto-precio">$7 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Paramount+ 1 Perfil Mensual -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/paramount.png" alt="Paramount+" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Paramount+ 1 PERFIL – Mensual</div>
+                        <div class="producto-precio">$1.5 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Paramount+ Cuenta Completa Mensual -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/paramount.png" alt="Paramount+" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Paramount+ CUENTA COMPLETA – Mensual</div>
+                        <div class="producto-precio">$3 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Paramount+ Cuenta Completa Anual -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/paramount.png" alt="Paramount+" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Paramount+ CUENTA COMPLETA – Anual</div>
+                        <div class="producto-precio">$12 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Apple TV+ Perfil Privado -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/appletv.png" alt="Apple TV" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Apple TV+ PERFIL PRIVADO – Mensual</div>
+                        <div class="producto-precio">$2 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Apple TV+ Cuenta Completa -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/appletv.png" alt="Apple TV" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Apple TV+ CUENTA COMPLETA – Mensual</div>
+                        <div class="producto-precio">$4 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Viki Rakuten Perfil Privado -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/viki.png" alt="Viki Rakuten" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Viki Rakuten PERFIL PRIVADO – Mensual</div>
+                        <div class="producto-precio">$1 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Viki Rakuten Cuenta Completa -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/viki.png" alt="Viki Rakuten" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Viki Rakuten CUENTA COMPLETA – Mensual</div>
+                        <div class="producto-precio">$2 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Disney+ Perfil Privado -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/disney.png" alt="Disney+" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Disney+ PERFIL PRIVADO – Mensual</div>
+                        <div class="producto-precio">$3 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Disney+ Cuenta Completa -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/disney.png" alt="Disney+" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Disney+ CUENTA COMPLETA – Mensual</div>
+                        <div class="producto-precio">$11 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Prime Video Perfil Privado -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/primevideo.png" alt="Prime Video" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Prime Video PERFIL PRIVADO – Mensual</div>
+                        <div class="producto-precio">$3 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Prime Video Cuenta Completa -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/primevideo.png" alt="Prime Video" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Prime Video CUENTA COMPLETA – Mensual</div>
+                        <div class="producto-precio">$5 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: Prime Video Anual 1 Perfil -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/primevideo.png" alt="Prime Video" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Prime Video 1 PERFIL – Anual</div>
+                        <div class="producto-precio">$10 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: HBO Max Perfil Privado -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/hbo.png" alt="HBO Max" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">HBO Max PERFIL PRIVADO – Mensual</div>
+                        <div class="producto-precio">$2 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: HBO Max Cuenta Completa Mensual -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/hbo.png" alt="HBO Max" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">HBO Max CUENTA COMPLETA – Mensual</div>
+                        <div class="producto-precio">$5 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: HBO Max Cuenta Completa Anual -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/hbo.png" alt="HBO Max" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">HBO Max CUENTA COMPLETA – Anual</div>
+                        <div class="producto-precio">$10 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: YouTube Premium Plan 1 Mes -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/youtube.png" alt="YouTube Premium" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">YouTube Premium – PLAN 1 MES</div>
+                        <div class="producto-precio">$3 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Streaming: YouTube Premium Plan 3 Meses -->
+                <div class="producto-card" data-category="streaming" style="display: none;">
+                    <div class="producto-badge">Streaming</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/youtube.png" alt="YouTube Premium" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">YouTube Premium – PLAN 3 MESES</div>
+                        <div class="producto-precio">$7 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 16 - Supercell -->
+                <div class="producto-card" data-category="supercell" style="display: none;">
+                    <div class="producto-badge">Supercell</div>
+                    <div class="producto-imagen">
+                        <img src="clashofclans.png" alt="Clash of Clans" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Clash of Clans Account</div>
+                        <div class="producto-precio">$12.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 17 - Supercell -->
+                <div class="producto-card" data-category="supercell" style="display: none;">
+                    <div class="producto-badge">Supercell</div>
+                    <div class="producto-imagen">
+                        <img src="clashroyale.png" alt="Clash Royale" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Clash Royale Account</div>
+                        <div class="producto-precio">$9.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 18 - Supercell -->
+                <div class="producto-card" data-category="supercell" style="display: none;">
+                    <div class="producto-badge">Supercell</div>
+                    <div class="producto-imagen">
+                        <img src="brawlstars.png" alt="Brawl Stars" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Brawl Stars Account</div>
+                        <div class="producto-precio">$8.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 19 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite1.png" alt="1000 Pavos" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">1.000 Pavos</div>
+                        <div class="producto-precio">$5 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 20 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite1.png" alt="2800 Pavos" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">2.800 Pavos</div>
+                        <div class="producto-precio">$14 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 21 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite1.png" alt="5000 Pavos" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">5.000 Pavos</div>
+                        <div class="producto-precio">$21 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 22 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite1.png" alt="13500 Pavos" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">13.500 Pavos</div>
+                        <div class="producto-precio">$45 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 23 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite2.png" alt="Battle Pass" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Battle Pass</div>
+                        <div class="producto-precio">$8 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 24 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite1.png" alt="Fortnite Crew Login" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Fortnite Crew (Via Login)</div>
+                        <div class="producto-precio">$5 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 25 - Fortnite -->
+                <div class="producto-card" data-category="fortnite" style="display: none;">
+                    <div class="producto-badge">Fortnite</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/fortnite1.png" alt="Fortnite Crew Gift" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Fortnite Crew (Via Gift)</div>
+                        <div class="producto-precio">$8 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 26 - Free Fire -->
+                <div class="producto-card" data-category="freefire" style="display: none;">
+                    <div class="producto-badge">Free Fire</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/freefire1.png" alt="Free Fire Pase Elite" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Pase Elite</div>
+                        <div class="producto-precio">$2 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Otros: CapCut Pro -->
+                <div class="producto-card" data-category="otros" style="display: none;">
+                    <div class="producto-badge">Otros</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/capcut.png" alt="CapCut Pro" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">CapCut Pro – PLAN 1 MES</div>
+                        <div class="producto-precio">$5.50 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Otros: Canva Pro -->
+                <div class="producto-card" data-category="otros" style="display: none;">
+                    <div class="producto-badge">Otros</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/canva.png" alt="Canva Pro" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Canva Pro PERMANENTE</div>
+                        <div class="producto-precio">$6 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Otros: OnlyFans 50$ -->
+                <div class="producto-card" data-category="otros" style="display: none;">
+                    <div class="producto-badge">Otros</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/onlyfans.png" alt="OnlyFans" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">OnlyFans Cuenta $50 Saldo</div>
+                        <div class="producto-precio">$8 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Otros: OnlyFans 100$ -->
+                <div class="producto-card" data-category="otros" style="display: none;">
+                    <div class="producto-badge">Otros</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/onlyfans.png" alt="OnlyFans" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">OnlyFans Cuenta $100 Saldo</div>
+                        <div class="producto-precio">$14 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Otros: Brazzers -->
+                <div class="producto-card" data-category="otros" style="display: none;">
+                    <div class="producto-badge">Otros</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/brazzers.png" alt="Brazzers" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Brazzers – ANUAL</div>
+                        <div class="producto-precio">$10 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto - Otros: PornHub -->
+                <div class="producto-card" data-category="otros" style="display: none;">
+                    <div class="producto-badge">Otros</div>
+                    <div class="producto-imagen">
+                        <img src="imagenes/pornhub.png" alt="PornHub Premium" class="skin-img">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">PornHub Premium – ANUAL</div>
+                        <div class="producto-precio">$4 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
