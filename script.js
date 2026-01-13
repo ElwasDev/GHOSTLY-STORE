@@ -282,11 +282,6 @@ const descripcionesProductos = {
         '› Entrega inmediata.',
         '› Compra 100% segura.'
     ],
-    'Battle Pass': [
-        '› Pase de batalla actual.',
-        '› Desbloquea todas las recompensas.',
-        '› Entrega inmediata.'
-    ],
     'Fortnite Crew (Via Login)': [
         '› Todos los pases + Crew Pack.',
         '› Crew Styles + Rocket Pass.',
