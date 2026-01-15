@@ -1,4 +1,217 @@
 // ============================================
+// CURSOR PERSONALIZADO (OPTIMIZADO)
+// ============================================
+const cursor = document.querySelector('.custom-cursor');
+const follower = document.querySelector('.cursor-follower');
+
+if (cursor && follower) {
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let followerX = 0, followerY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    // Usar requestAnimationFrame para animación suave
+    function animateCursor() {
+        // Cursor principal - sigue inmediatamente
+        cursorX = mouseX;
+        cursorY = mouseY;
+        cursor.style.transform = `translate(${cursorX - 6}px, ${cursorY - 6}px)`;
+        
+        // Follower - sigue con suavidad
+        followerX += (mouseX - followerX) * 0.15;
+        followerY += (mouseY - followerY) * 0.15;
+        follower.style.transform = `translate(${followerX - 20}px, ${followerY - 20}px)`;
+        
+        requestAnimationFrame(animateCursor);
+    }
+    
+    animateCursor();
+
+    // Efecto hover en elementos clickeables
+    document.querySelectorAll('a, button, .producto-card, .categoria-btn').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            follower.classList.add('hover');
+            cursor.style.width = '18px';
+            cursor.style.height = '18px';
+        });
+        el.addEventListener('mouseleave', () => {
+            follower.classList.remove('hover');
+            cursor.style.width = '12px';
+            cursor.style.height = '12px';
+        });
+    });
+}
+
+// ============================================
+// CONTADOR ANIMADO DE ESTADÍSTICAS
+// ============================================
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += step;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+        
+        updateCounter();
+    });
+}
+
+// Observador para iniciar animación cuando sea visible
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        statsObserver.observe(heroStats);
+    }
+});
+
+// ============================================
+// TYPEWRITER EFFECT
+// ============================================
+const typewriterPhrases = [
+    "Cuentas premium al mejor precio 👻",
+    "Juegos originales y garantizados 🎮",
+    "Entregas inmediatas 24/7 ⚡",
+    "Más de 500 clientes satisfechos ⭐",
+    "Tu tienda de confianza 🛡️"
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typewriterElement = null;
+
+function typeWriter() {
+    typewriterElement = document.getElementById('typewriter-text');
+    if (!typewriterElement) return;
+    
+    const currentPhrase = typewriterPhrases[phraseIndex];
+    
+    if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+    }
+    
+    let typeSpeed = isDeleting ? 30 : 80;
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        typeSpeed = 2000; // Pausa al terminar de escribir
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
+        typeSpeed = 500; // Pausa antes de escribir nueva frase
+    }
+    
+    setTimeout(typeWriter, typeSpeed);
+}
+
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+// ============================================
+// CARRUSEL DE IMÁGENES EN PRODUCTOS
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselImages = document.querySelectorAll('.carousel-img');
+    
+    carouselImages.forEach(img => {
+        const imagesData = img.getAttribute('data-images');
+        if (!imagesData) return;
+        
+        const allImages = imagesData.split(',').map(s => s.trim());
+        let validImages = [];
+        const container = img.parentElement;
+        
+        // Verificar qué imágenes existen
+        let checkedCount = 0;
+        allImages.forEach((imgSrc, index) => {
+            const testImg = new Image();
+            testImg.onload = function() {
+                validImages.push({ src: imgSrc, index: index });
+                checkedCount++;
+                if (checkedCount === allImages.length) {
+                    validImages.sort((a, b) => a.index - b.index);
+                    setupCarousel();
+                }
+            };
+            testImg.onerror = function() {
+                checkedCount++;
+                if (checkedCount === allImages.length) {
+                    validImages.sort((a, b) => a.index - b.index);
+                    setupCarousel();
+                }
+            };
+            testImg.src = imgSrc;
+        });
+        
+        function setupCarousel() {
+            if (validImages.length <= 1) return;
+            
+            let currentIndex = 0;
+            let interval = null;
+            const images = validImages.map(v => v.src);
+            
+            function changeImage() {
+                img.style.opacity = '0';
+                img.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    img.src = images[currentIndex];
+                    img.style.opacity = '1';
+                    img.style.transform = 'scale(1)';
+                }, 300);
+            }
+            
+            container.addEventListener('mouseenter', () => {
+                changeImage();
+                interval = setInterval(changeImage, 1500);
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                clearInterval(interval);
+                img.style.opacity = '0';
+                img.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    currentIndex = 0;
+                    img.src = images[0];
+                    img.style.opacity = '1';
+                    img.style.transform = 'scale(1)';
+                }, 300);
+            });
+        }
+    });
+});
+
+// ============================================
 // MODAL SOBRE NOSOTROS
 // ============================================
 const aboutModal = document.getElementById('about-modal');
@@ -69,6 +282,97 @@ const productoModal = document.getElementById('producto-modal');
 
 // Descripciones personalizadas por producto
 const descripcionesProductos = {
+    // ========== MINECRAFT PRODUCTS ==========
+    'MC STOCK | CAPES': [
+        '› Acceso completo a Java & Bedrock Permanente.',
+        '› Contiene las capas Pan & Common.',
+        '› Cambio de nombre disponible.',
+        '› Garantía incluida.',
+        '› Unban all'
+    ],
+    'MC STOCK | CAPES': [
+        '› Acceso completo a Java & Bedrock Permanente.',
+        '› Contiene las capas Pan & Common.',
+        '› Cambio de nombre disponible.',
+        '› Garantía incluida.',
+        '› Unban all'
+    ],
+    'MC STOCK | RANKS COSMETICS': [
+        '› Cuenta Minecraft Bedrock Edition.',
+        '› Compatible con Windows 10/11.',
+        '› Juega en PC, consolas y móvil.',
+        '› Garantía incluida.'
+    ],
+    'MC STOCK | RANKS GAMES': [
+        '› Cuenta con acceso completo.',
+        '› Cambio de email y contraseña.',
+        '› Java & Bedrock incluidos.',
+        '› Garantía permanente.'
+    ],
+    'MC STOCK | RANK GHOST': [
+        '› Acceso completo a Java & Bedrock Permanente.',
+        '› Contiene Rango **GHOST** en SpookyBox SpookMC.',
+        '› Contiene Rango **VIP+** en ClashBox TilTed.',
+        '› Cambio de nombre disponible en 30 días.',
+        '› Contiene las capas Pan & Common.',
+        '› Garantía incluida.',
+        '› Unban all'
+    ],
+    'MC STOCK | Capa Migrator': [
+        '› Cuenta con capa de migración.',
+        '› Capa exclusiva y permanente.',
+        '› Full acceso a la cuenta.',
+        '› Garantía incluida.'
+    ],
+    'MC STOCK | Optifine Cape': [
+        '› Cuenta con capa de Optifine.',
+        '› Capa personalizable.',
+        '› Full acceso a la cuenta.',
+        '› Garantía incluida.'
+    ],
+    'MC STOCK | NFA Account': [
+        '› Cuenta NFA (No Full Access).',
+        '› Ideal para servidores.',
+        '› Precio económico.',
+        '› Garantía de funcionamiento.'
+    ],
+    'MC STOCK | SFA Account': [
+        '› Cuenta SFA (Semi Full Access).',
+        '› Cambio de skin disponible.',
+        '› Acceso estable.',
+        '› Garantía incluida.'
+    ],
+    'MC STOCK | Realms Plus': [
+        '› Cuenta con Realms Plus activo.',
+        '› Servidor privado incluido.',
+        '› Juega con hasta 10 amigos.',
+        '› Garantía incluida.'
+    ],
+    'MC STOCK | Minecoins 1000': [
+        '› 1000 Minecoins incluidos.',
+        '› Compra skins y mundos.',
+        '› Entrega inmediata.',
+        '› Garantía incluida.'
+    ],
+    'MC STOCK | Bundle Pack': [
+        '› Pack completo de cuentas.',
+        '› Incluye múltiples cuentas.',
+        '› Mejor precio por unidad.',
+        '› Garantía en todas.'
+    ],
+    // Minecraft Premium Method
+    'Minecraft Premium Method': [
+        '› Ghostly Store | Minecraft Premium Method',
+        '› $10 USD',
+        '› Accede al método más rentable del mercado para obtener cuentas Minecraft Premium de forma constante.',
+        '',
+        '¿Qué incluye?',
+        '› Acceso mensual con MFAs nuevas todos los días',
+        '› Posibilidad de uso en grupo para aumentar ganancias',
+        '› Método activo y funcional en el mercado actual',
+        '› Revende tus cuentas y genera ingresos constantes',
+        '› Acceso a servidor privado exclusivo con espacio propio'
+    ],
     // Crunchyroll Planes
     'PLAN MENSUAL MEGAFAN (Perfil privado)': [
         '› 1 mes de duración.',
@@ -288,12 +592,6 @@ const descripcionesProductos = {
         '› 1.000 V-Bucks incluidos.',
         '› Entrega via login.'
     ],
-    'Fortnite Crew (Via Gift)': [
-        '› Todos los pases + Crew Pack.',
-        '› Crew Styles + Rocket Pass.',
-        '› 1.000 V-Bucks incluidos.',
-        '› Entrega via regalo.'
-    ],
     // Free Fire
     'Pase Elite': [
         '› Pase Elite completo.',
@@ -382,37 +680,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 thumb.src = imagen;
             }
             
-            // Verificar si tiene imagen hover
+            // Verificar si tiene múltiples imágenes (carrusel)
             const imgElement = card.querySelector('.skin-img');
             const modalImg = document.getElementById('modal-imagen-principal');
-            const modalThumb = document.querySelector('.thumb-img');
+            const thumbsContainer = document.querySelector('.producto-modal-thumbs');
             
-            if (imgElement.dataset.hover) {
-                // Añadir segunda thumbnail
-                const thumbsContainer = document.querySelector('.producto-modal-thumbs');
-                thumbsContainer.innerHTML = `
-                    <img src="${imgElement.dataset.original}" alt="Thumb 1" class="thumb-img active" data-img="${imgElement.dataset.original}">
-                    <img src="${imgElement.dataset.hover}" alt="Thumb 2" class="thumb-img" data-img="${imgElement.dataset.hover}">
-                `;
+            // Obtener las imágenes del data-images
+            const imagesData = imgElement.getAttribute('data-images');
+            thumbsContainer.innerHTML = '';
+            
+            if (imagesData) {
+                const images = imagesData.split(',').map(s => s.trim()).filter(s => s);
+                let validImages = [];
+                let checkedCount = 0;
                 
-                // Event listeners para thumbnails
-                const thumbs = thumbsContainer.querySelectorAll('.thumb-img');
-                thumbs.forEach(t => {
-                    t.addEventListener('click', function() {
-                        thumbs.forEach(th => th.classList.remove('active'));
-                        this.classList.add('active');
-                        modalImg.style.transition = 'opacity 0.3s ease';
-                        modalImg.style.opacity = '0';
-                        setTimeout(() => {
-                            modalImg.src = this.dataset.img;
-                            modalImg.style.opacity = '1';
-                        }, 150);
-                    });
+                images.forEach((imgSrc, index) => {
+                    const testImg = new Image();
+                    testImg.onload = function() {
+                        validImages.push({ src: imgSrc, index: index });
+                        checkedCount++;
+                        checkComplete();
+                    };
+                    testImg.onerror = function() {
+                        checkedCount++;
+                        checkComplete();
+                    };
+                    testImg.src = imgSrc;
                 });
-            } else {
-                // Resetear a una sola thumbnail
-                const thumbsContainer = document.querySelector('.producto-modal-thumbs');
-                thumbsContainer.innerHTML = `<img src="${imagen}" alt="Thumb 1" class="thumb-img active">`;
+                
+                function checkComplete() {
+                    if (checkedCount === images.length) {
+                        validImages.sort((a, b) => a.index - b.index);
+                        
+                        if (validImages.length > 1) {
+                            validImages.forEach((img, i) => {
+                                const thumb = document.createElement('img');
+                                thumb.src = img.src;
+                                thumb.alt = 'Thumb ' + (i + 1);
+                                thumb.className = 'thumb-img' + (i === 0 ? ' active' : '');
+                                thumb.dataset.img = img.src;
+                                
+                                thumb.addEventListener('click', function() {
+                                    thumbsContainer.querySelectorAll('.thumb-img').forEach(th => th.classList.remove('active'));
+                                    this.classList.add('active');
+                                    modalImg.style.opacity = '0';
+                                    setTimeout(() => {
+                                        modalImg.src = this.dataset.img;
+                                        modalImg.style.opacity = '1';
+                                    }, 150);
+                                });
+                                
+                                thumbsContainer.appendChild(thumb);
+                            });
+                        }
+                    }
+                }
             }
             
             // Actualizar descripción según el producto
@@ -424,7 +746,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     '› Compra segura y confiable.'
                 ];
                 
-                featuresList.innerHTML = descripcion.map(item => `<li>${item}</li>`).join('');
+                // Convertir **texto** a negrita
+                featuresList.innerHTML = descripcion.map(item => {
+                    return `<li>${item.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')}</li>`;
+                }).join('');
             }
             
             // Mostrar modal
@@ -587,13 +912,6 @@ productCards.forEach(card => {
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
     });
-    
-    // Click en la tarjeta del producto
-    card.addEventListener('click', function() {
-        const productName = this.querySelector('.producto-nombre').textContent;
-        const productPrice = this.querySelector('.producto-precio').textContent;
-        alert(`Producto: ${productName}\nPrecio: ${productPrice}\n\n¡Contacta con nosotros para comprarlo!`);
-    });
 });
 
 // ============================================
@@ -693,5 +1011,54 @@ function createParticles() {
     setInterval(createFloatingParticle, 500);
 }
 
+// PARTÍCULAS PARA SECCIÓN DE PRODUCTOS
+// ============================================
+function createProductosParticles() {
+    const container = document.getElementById('particles-productos');
+    if (!container) return;
+    
+    const colors = ['white', 'purple', 'blue', 'violet'];
+    
+    // Crear muchas estrellas fijas que parpadean
+    for (let i = 0; i < 200; i++) {
+        const star = document.createElement('div');
+        star.className = 'star ' + colors[Math.floor(Math.random() * colors.length)];
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.width = (Math.random() * 3 + 1) + 'px';
+        star.style.height = star.style.width;
+        star.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        star.style.animationDelay = Math.random() * 5 + 's';
+        container.appendChild(star);
+    }
+    
+    // Crear partículas flotantes
+    function createFloatingParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle ' + colors[Math.floor(Math.random() * colors.length)];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.width = (Math.random() * 5 + 2) + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.animationDuration = (Math.random() * 12 + 8) + 's';
+        
+        container.appendChild(particle);
+        
+        setTimeout(() => {
+            particle.remove();
+        }, parseFloat(particle.style.animationDuration) * 1000);
+    }
+    
+    // Crear muchas partículas iniciales
+    for (let i = 0; i < 50; i++) {
+        setTimeout(() => createFloatingParticle(), i * 100);
+    }
+    
+    // Crear nuevas partículas continuamente (más frecuente)
+    setInterval(createFloatingParticle, 300);
+}
+
 // Iniciar partículas cuando cargue la página
-document.addEventListener('DOMContentLoaded', createParticles);
+document.addEventListener('DOMContentLoaded', () => {
+    createParticles();
+    createProductosParticles();
+});
