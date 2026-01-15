@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GhostlyStore - Best Seller</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="imagenes/favicon.png">
+    
     <!-- Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -21,31 +24,57 @@
          MODAL SOBRE NOSOTROS
     ============================================ -->
     <div id="about-modal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content about-animated">
             <span class="modal-close">&times;</span>
-            <h2>👻 Sobre Nosotros - Ghostly Store</h2>
-            <p class="intro">En <strong>Ghostly Store</strong>, creemos que el entretenimiento y la experiencia digital de calidad no deberían tener límites.</p>
+            <h2 class="about-title">👻 Ghostly Store</h2>
             
-            <p>Somos una tienda especializada en ofrecerte cuentas premium de tus plataformas favoritas, desde videojuegos hasta servicios de streaming. Aquí encontrarás acceso seguro y confiable a:</p>
+            <div class="about-section fade-in-up">
+                <p class="about-intro">Tu tienda de confianza para cuentas premium y juegos digitales.</p>
+            </div>
+            
+            <div class="about-section fade-in-up delay-1">
+                <h3>  ¿Quiénes somos?</h3>
+                <p>Somos un equipo apasionado por el entretenimiento digital. Ofrecemos cuentas premium de streaming, videojuegos y más a precios accesibles para todos.</p>
+            </div>
 
-            <ul class="services-list">
-                <li>🎮 Minecraft Java & Bedrock</li>
-                <li>🎬 Netflix, Disney+, Crunchyroll, HBO Max, Prime Video</li>
-                <li>🎧 Spotify Premium, Deezer, YouTube Premium</li>
-            </ul>
+            <div class="about-stats fade-in-up delay-2">
+                <div class="stat-item">
+                    <span class="stat-number">180+</span>
+                    <span class="stat-label">Ventas realizadas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Soporte disponible</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Garantía</span>
+                </div>
+            </div>
             
-            <h3>🚀 ¿Por qué elegir Ghostly Store?</h3>
-            <ul class="benefits-list">
-                <li><strong>Entregas rápidas:</strong> Recibe tus cuentas en minutos.</li>
-                <li><strong>Soporte garantizado:</strong> Nuestro equipo está listo para ayudarte ante cualquier inconveniente.</li>
-                <li><strong>Precios accesibles:</strong> Disfruta contenido premium sin pagar de más.</li>
-                <li><strong>100% confiable:</strong> Cientos de clientes satisfechos nos respaldan.</li>
-            </ul>
+            <div class="about-section fade-in-up delay-3">
+                <h3>✨ ¿Por qué elegirnos?</h3>
+                <div class="about-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>Entregas inmediatas</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🛡️</span>
+                        <span>Garantía en todos los productos</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💰</span>
+                        <span>Los mejores precios</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🤝</span>
+                        <span>Atención personalizada</span>
+                    </div>
+                </div>
+            </div>
             
-            <h3>🌙 Nuestra misión</h3>
-            <p>En <strong>Ghostly Store</strong> trabajamos para que el acceso al entretenimiento digital esté al alcance de todos, sin complicaciones ni precios elevados. Queremos que juegues, veas y escuches lo que amas sin límites.</p>
-            
-            <p class="contact-text">¿Tienes dudas o necesitas ayuda con tu compra? Estamos disponibles para ti en nuestras redes y por WhatsApp 👻</p>
+            <p class="about-cta fade-in-up delay-4">¿Listo para disfrutar? ¡Contáctanos en Discord! 👻</p>
         </div>
     </div>
 
@@ -57,59 +86,21 @@
             <span class="modal-close">&times;</span>
             <h2>❓ Preguntas Frecuentes (FAQ)</h2>
             
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Cuánto tarda en llegar mi cuenta después de comprar?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Generalmente entregamos tu cuenta en cuestión de minutos. En algunos casos, puede tardar hasta 15 minutos si hay alta demanda. ¡Siempre recibirás tu producto lo más rápido posible! ⚡</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Qué pasa si mi cuenta deja de funcionar?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>¡No te preocupes! Todas nuestras cuentas tienen garantía. Si tu cuenta presenta algún problema, contáctanos por WhatsApp o Discord y te daremos una solución inmediata, ya sea reemplazándola o reembolsándote. 🛡️</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Las cuentas son personales o compartidas?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Dependiendo del producto, ofrecemos ambas opciones. Las cuentas personales son de uso exclusivo para ti, mientras que las compartidas tienen un precio más accesible. Cada producto indica claramente el tipo de cuenta. 📋</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Qué métodos de pago aceptan?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Aceptamos múltiples métodos de pago para tu comodidad: PayPal, transferencias bancarias, criptomonedas y más. Contáctanos para conocer todas las opciones disponibles en tu país. 💳</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>¿Cómo sé que Ghostly Store es confiable?</span>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Contamos con cientos de clientes satisfechos y reseñas positivas en nuestras redes sociales. Además, ofrecemos garantía en todos nuestros productos y soporte 24/7. ¡Tu satisfacción es nuestra prioridad! ⭐</p>
-                    </div>
-                </div>
+            <div class="faq-text">
+                <h3>¿Cuánto tarda en llegar mi compra?</h3>
+                <p>Las entregas son generalmente inmediatas. En ocasiones, debido a alta demanda o disponibilidad, el tiempo de entrega puede variar ligeramente. Te pedimos paciencia en estos casos. ¡Siempre recibirás tu producto lo más rápido posible! ⚡</p>
+                
+                <h3>¿Qué pasa si mi producto deja de funcionar?</h3>
+                <p>¡No te preocupes! Todos nuestros productos cuentan con garantía. Si presentas algún inconveniente, contáctanos por WhatsApp o Discord y te brindaremos una solución inmediata, ya sea con un reemplazo o reembolso. 🛡️</p>
+                
+                <h3>¿Qué métodos de pago aceptan?</h3>
+                <p>Aceptamos múltiples métodos de pago para tu comodidad: PayPal, tarjetas de débito/crédito, criptomonedas, transferencias bancarias y más. Contáctanos en Discord para conocer todas las opciones disponibles en tu país. 💳</p>
+                
+                <h3>¿Cómo sé que Ghostly Store es confiable?</h3>
+                <p>Contamos con más de 180 compras realizadas y clientes satisfechos que nos respaldan. Todos nuestros productos incluyen garantía y ofrecemos soporte 24/7. ¡Tu satisfacción es nuestra prioridad! ⭐</p>
             </div>
             
-            <p class="contact-text">¿Tienes más preguntas? ¡Contáctanos por WhatsApp o Discord! 👻</p>
+            <p class="contact-text">¿Tienes más preguntas? ¡Contáctanos por Discord! 👻</p>
         </div>
     </div>
 
@@ -163,24 +154,103 @@
          HEADER
     ============================================ -->
     <header>
-        <div class="logo">GhostlyStore</div>
+        <div class="logo"><img src="imagenes/minecraft-imagen.png" alt="Logo" class="logo-img"> GhostlyStore</div>
         <nav>
             <a href="#about">Sobre nosotros</a>
             <a href="#reviews">Reviews</a>
             <a href="#faq">FAQ</a>
         </nav>
-        <div class="auth-buttons">
-            <a href="#login" class="login">Login</a>
-            <a href="#register" class="register">Register</a>
-        </div>
     </header>
 
     <!-- ============================================
          HERO SECTION
     ============================================ -->
     <section class="hero-section">
-        <h1 class="hero-title">GHOSTLY STORE</h1>
-        <p class="hero-subtitle">Accede al lado oscuro del entretenimiento... Sin vender tu alma. 👻</p>
+        <!-- Cursor personalizado -->
+        <div class="custom-cursor"></div>
+        <div class="cursor-follower"></div>
+        
+        <!-- Líneas de neón decorativas -->
+        <div class="neon-lines">
+            <div class="neon-line line-1"></div>
+            <div class="neon-line line-2"></div>
+            <div class="neon-line line-3"></div>
+        </div>
+        
+        <!-- Logo girando -->
+        <div class="spinning-logo-container">
+            <div class="logo-ring"></div>
+            <div class="logo-ring ring-2"></div>
+            <img src="imagenes/minecraft-imagen.png" alt="Logo" class="spinning-logo">
+            <div class="logo-glow"></div>
+        </div>
+        
+        <h1 class="hero-title glitch" data-text="GHOSTLY STORE">GHOSTLY STORE</h1>
+        <p class="hero-subtitle"><span id="typewriter-text"></span><span class="cursor">|</span></p>
+        
+        <!-- Estadísticas animadas -->
+        <div class="hero-stats">
+            <div class="stat-box">
+                <span class="stat-number" data-target="500">0</span>
+                <span class="stat-plus">+</span>
+                <span class="stat-label">Ventas</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="100">0</span>
+                <span class="stat-plus">%</span>
+                <span class="stat-label">Garantía</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+                <span class="stat-number" data-target="24">0</span>
+                <span class="stat-plus">/7</span>
+                <span class="stat-label">Soporte</span>
+            </div>
+        </div>
+        
+        <!-- Botones CTA -->
+        <div class="hero-cta">
+            <a href="https://discord.gg/hqEP59ZYkV" target="_blank" class="cta-btn primary">
+                <i class="fab fa-discord"></i> Únete al Discord
+            </a>
+            <a href="#productos" class="cta-btn secondary">
+                <span>Ver Productos</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        
+        <!-- Globos/Burbujas flotantes -->
+        <div class="floating-bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+        
+        <!-- Iconos flotantes decorativos -->
+        <div class="floating-icons">
+            <span class="float-icon">🎮</span>
+            <span class="float-icon">💎</span>
+            <span class="float-icon">⭐</span>
+            <span class="float-icon">🎯</span>
+            <span class="float-icon">🔥</span>
+            <span class="float-icon">💜</span>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
         
         <!-- Divisor de ondas elegante -->
         <div class="wave-mountains">
@@ -200,18 +270,22 @@
         <div class="product-section">
             <div class="product-image">
                 <!-- La imagen está en la carpeta imagenes -->
-                <img src="imagenes/minecraft-imagen.png" alt="Minecraft Java & Bedrock">
+                <img src="imagenes/minecraft-imagen.png" alt="Minecraft Premium Method">
             </div>
 
             <div class="product-info">
-                <h2>Minecraft Java & Bedrock</h2>
-                <div class="price">$7 USD</div>
+                <h2>Ghostly Store | Minecraft Premium Method</h2>
+                <div class="price">$10 USD</div>
                 
+                <p class="method-intro">Accede al método más rentable del mercado para obtener cuentas Minecraft Premium de forma constante.</p>
+                
+                <h3 class="section-title">¿Qué incluye?</h3>
                 <ul class="features">
-                    <li>Minecraft Java & Bedrock PERMANENTE (29.99$)</li>
-                    <li>Cambio de nick DISPONIBLE</li>
-                    <li>Incluye garantía PERMANENTE</li>
-                    <li>Incluye una, dos o más capas</li>
+                    <li>Acceso mensual con MFAs nuevas todos los días</li>
+                    <li>Posibilidad de uso en grupo para aumentar ganancias</li>
+                    <li>Método activo y funcional en el mercado actual</li>
+                    <li>Revende tus cuentas y genera ingresos constantes</li>
+                    <li>Acceso a servidor privado exclusivo con espacio propio</li>
                 </ul>
 
                 <button class="buy-button">¡Compra en nuestras redes!</button>
@@ -228,9 +302,11 @@
     <!-- ============================================
          SECCIÓN DE PRODUCTOS
     ============================================ -->
-    <section class="productos-section">
+    <section class="productos-section" id="productos">
+        <div id="particles-productos"></div>
         <div class="productos-container">
             <h2>Productos</h2>
+            <p class="productos-subtitle">Explora nuestra colección premium de cuentas y servicios digitales</p>
 
             <!-- Categorías -->
             <div class="categorias">
@@ -238,6 +314,7 @@
                 <button class="categoria-btn" data-category="streaming">Streaming</button>
                 <button class="categoria-btn" data-category="fortnite">Fortnite</button>
                 <button class="categoria-btn" data-category="freefire">Free Fire</button>
+                <button class="categoria-btn" data-category="feather">Feather</button>
                 <button class="categoria-btn" data-category="otros">Otros</button>
             </div>
 
@@ -246,12 +323,12 @@
                 <!-- Producto 1 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft1.png" alt="Minecraft Account" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto1-1.png" alt="Minecraft Account" class="skin-img carousel-img active" data-images="imagenes/Producto1-1.png,imagenes/Producto1-2.png,imagenes/Producto1-3.png,imagenes/Producto1-4.png,imagenes/Producto1-5.png,imagenes/Producto1-6.png,imagenes/Producto1-7.png,imagenes/Producto1-8.png,imagenes/Producto1-9.png,imagenes/Producto1-10.png">
                     </div>
                     <div class="producto-info">
-                        <div class="producto-nombre">MC STOCK | Premium Account</div>
-                        <div class="producto-precio">$7.99 USD</div>
+                        <div class="producto-nombre">MC STOCK | CAPES</div>
+                        <div class="producto-precio">$5 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -259,12 +336,12 @@
                 <!-- Producto 2 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft2.png" alt="Minecraft Java" class="skin-img" data-hover="imagenes/minecraft2b.png" data-original="imagenes/minecraft2.png">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto2-1.png" alt="Minecraft Java" class="skin-img carousel-img active" data-images="imagenes/Producto2-1.png,imagenes/Producto2-2.png,imagenes/Producto2-3.png,imagenes/Producto2-4.png,imagenes/Producto2-5.png,imagenes/Producto2-6.png,imagenes/Producto2-7.png,imagenes/Producto2-8.png,imagenes/Producto2-9.png,imagenes/Producto2-10.png">
                     </div>
                     <div class="producto-info">
-                        <div class="producto-nombre">MC STOCK | Java Edition</div>
-                        <div class="producto-precio">$5.99 USD</div>
+                        <div class="producto-nombre">MC STOCK | CAPES</div>
+                        <div class="producto-precio">$5 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -272,12 +349,12 @@
                 <!-- Producto 3 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft3.png" alt="Minecraft Bedrock" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto3-1.png" alt="Minecraft Bedrock" class="skin-img carousel-img active" data-images="imagenes/Producto3-1.png,imagenes/Producto3-2.png,imagenes/Producto3-3.png,imagenes/Producto3-4.png,imagenes/Producto3-5.png,imagenes/Producto3-6.png,imagenes/Producto3-7.png,imagenes/Producto3-8.png,imagenes/Producto3-9.png,imagenes/Producto3-10.png">
                     </div>
                     <div class="producto-info">
-                        <div class="producto-nombre">MC STOCK | Bedrock Edition</div>
-                        <div class="producto-precio">$5.99 USD</div>
+                        <div class="producto-nombre">MC STOCK | RANKS COSMETICS</div>
+                        <div class="producto-precio">$7 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -285,12 +362,12 @@
                 <!-- Producto 4 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft4.png" alt="Minecraft Full Access" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto4-1.png" alt="Minecraft Full Access" class="skin-img carousel-img active" data-images="imagenes/Producto4-1.png,imagenes/Producto4-2.png,imagenes/Producto4-3.png,imagenes/Producto4-4.png,imagenes/Producto4-5.png,imagenes/Producto4-6.png,imagenes/Producto4-7.png,imagenes/Producto4-8.png,imagenes/Producto4-9.png,imagenes/Producto4-10.png">
                     </div>
                     <div class="producto-info">
-                        <div class="producto-nombre">MC STOCK | Full Access</div>
-                        <div class="producto-precio">$9.99 USD</div>
+                        <div class="producto-nombre">MC STOCK | RANKS GAMES</div>
+                        <div class="producto-precio">$7 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -298,12 +375,12 @@
                 <!-- Producto 5 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft5.png" alt="Minecraft Hypixel" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto5-1.png" alt="Minecraft Hypixel" class="skin-img carousel-img active" data-images="imagenes/Producto5-1.png,imagenes/Producto5-2.png,imagenes/Producto5-3.png,imagenes/Producto5-4.png,imagenes/Producto5-5.png,imagenes/Producto5-6.png,imagenes/Producto5-7.png,imagenes/Producto5-8.png,imagenes/Producto5-9.png,imagenes/Producto5-10.png">
                     </div>
                     <div class="producto-info">
-                        <div class="producto-nombre">MC STOCK | Hypixel Rank</div>
-                        <div class="producto-precio">$12.99 USD</div>
+                        <div class="producto-nombre">MC STOCK | RANKS</div>
+                        <div class="producto-precio">$18 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -311,8 +388,8 @@
                 <!-- Producto 6 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft6.png" alt="Minecraft Cape" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto6-1.png" alt="Minecraft Cape" class="skin-img carousel-img active" data-images="imagenes/Producto6-1.png,imagenes/Producto6-2.png,imagenes/Producto6-3.png,imagenes/Producto6-4.png,imagenes/Producto6-5.png,imagenes/Producto6-6.png,imagenes/Producto6-7.png,imagenes/Producto6-8.png,imagenes/Producto6-9.png,imagenes/Producto6-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | Capa Migrator</div>
@@ -324,8 +401,8 @@
                 <!-- Producto 7 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft7.png" alt="Minecraft Optifine" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto7-1.png" alt="Minecraft Optifine" class="skin-img carousel-img active" data-images="imagenes/Producto7-1.png,imagenes/Producto7-2.png,imagenes/Producto7-3.png,imagenes/Producto7-4.png,imagenes/Producto7-5.png,imagenes/Producto7-6.png,imagenes/Producto7-7.png,imagenes/Producto7-8.png,imagenes/Producto7-9.png,imagenes/Producto7-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | Optifine Cape</div>
@@ -337,8 +414,8 @@
                 <!-- Producto 8 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft8.png" alt="Minecraft NFA" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto8-1.png" alt="Minecraft NFA" class="skin-img carousel-img active" data-images="imagenes/Producto8-1.png,imagenes/Producto8-2.png,imagenes/Producto8-3.png,imagenes/Producto8-4.png,imagenes/Producto8-5.png,imagenes/Producto8-6.png,imagenes/Producto8-7.png,imagenes/Producto8-8.png,imagenes/Producto8-9.png,imagenes/Producto8-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | NFA Account</div>
@@ -350,8 +427,8 @@
                 <!-- Producto 9 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft9.png" alt="Minecraft SFA" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto9-1.png" alt="Minecraft SFA" class="skin-img carousel-img active" data-images="imagenes/Producto9-1.png,imagenes/Producto9-2.png,imagenes/Producto9-3.png,imagenes/Producto9-4.png,imagenes/Producto9-5.png,imagenes/Producto9-6.png,imagenes/Producto9-7.png,imagenes/Producto9-8.png,imagenes/Producto9-9.png,imagenes/Producto9-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | SFA Account</div>
@@ -363,8 +440,8 @@
                 <!-- Producto 10 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft10.png" alt="Minecraft Realms" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto10-1.png" alt="Minecraft Realms" class="skin-img carousel-img active" data-images="imagenes/Producto10-1.png,imagenes/Producto10-2.png,imagenes/Producto10-3.png,imagenes/Producto10-4.png,imagenes/Producto10-5.png,imagenes/Producto10-6.png,imagenes/Producto10-7.png,imagenes/Producto10-8.png,imagenes/Producto10-9.png,imagenes/Producto10-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | Realms Plus</div>
@@ -376,8 +453,8 @@
                 <!-- Producto 11 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft11.png" alt="Minecraft Minecoins" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto11-1.png" alt="Minecraft Minecoins" class="skin-img carousel-img active" data-images="imagenes/Producto11-1.png,imagenes/Producto11-2.png,imagenes/Producto11-3.png,imagenes/Producto11-4.png,imagenes/Producto11-5.png,imagenes/Producto11-6.png,imagenes/Producto11-7.png,imagenes/Producto11-8.png,imagenes/Producto11-9.png,imagenes/Producto11-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | Minecoins 1000</div>
@@ -389,12 +466,25 @@
                 <!-- Producto 12 - Minecraft -->
                 <div class="producto-card" data-category="minecraft">
                     <div class="producto-badge">Minecraft</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/minecraft12.png" alt="Minecraft Bundle" class="skin-img">
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto12-1.png" alt="Minecraft Bundle" class="skin-img carousel-img active" data-images="imagenes/Producto12-1.png,imagenes/Producto12-2.png,imagenes/Producto12-3.png,imagenes/Producto12-4.png,imagenes/Producto12-5.png,imagenes/Producto12-6.png,imagenes/Producto12-7.png,imagenes/Producto12-8.png,imagenes/Producto12-9.png,imagenes/Producto12-10.png">
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">MC STOCK | Bundle Pack</div>
                         <div class="producto-precio">$19.99 USD</div>
+                        <button class="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+
+                <!-- Producto 13 - Minecraft Premium Method -->
+                <div class="producto-card" data-category="minecraft">
+                    <div class="producto-badge">Minecraft</div>
+                    <div class="producto-imagen carousel-container">
+                        <img src="imagenes/Producto13-1.png" alt="Minecraft Premium Method" class="skin-img carousel-img active" data-images="imagenes/Producto13-1.png,imagenes/Producto13-2.png,imagenes/Producto13-3.png,imagenes/Producto13-4.png,imagenes/Producto13-5.png,imagenes/Producto13-6.png,imagenes/Producto13-7.png,imagenes/Producto13-8.png,imagenes/Producto13-9.png,imagenes/Producto13-10.png">
+                    </div>
+                    <div class="producto-info">
+                        <div class="producto-nombre">Minecraft Premium Method</div>
+                        <div class="producto-precio">$10 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -498,7 +588,7 @@
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">Paramount+ CUENTA COMPLETA – Anual</div>
-                        <div class="producto-precio">$12 USD</div>
+                        <div class="producto-precio">$10 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -750,19 +840,6 @@
                     </div>
                 </div>
 
-                <!-- Producto 25 - Fortnite -->
-                <div class="producto-card" data-category="fortnite" style="display: none;">
-                    <div class="producto-badge">Fortnite</div>
-                    <div class="producto-imagen">
-                        <img src="imagenes/fortnitecrew.png" alt="Fortnite Crew Gift" class="skin-img">
-                    </div>
-                    <div class="producto-info">
-                        <div class="producto-nombre">Fortnite Crew (Via Gift)</div>
-                        <div class="producto-precio">$8 USD</div>
-                        <button class="btn-comprar">Comprar</button>
-                    </div>
-                </div>
-
                 <!-- Producto 26 - Free Fire -->
                 <div class="producto-card" data-category="freefire" style="display: none;">
                     <div class="producto-badge">Free Fire</div>
@@ -836,7 +913,7 @@
                     </div>
                     <div class="producto-info">
                         <div class="producto-nombre">Brazzers – ANUAL</div>
-                        <div class="producto-precio">$10 USD</div>
+                        <div class="producto-precio">$6 USD</div>
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
@@ -853,6 +930,27 @@
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </div>
+
+                <!-- ========== FEATHER POINTS ========== -->
+                <div class="producto-card feather-card" data-category="feather" style="display: none;">
+                    <div class="feather-text-content">
+                        <h3 class="feather-line title">FEATHER POINTS — Stock Limitado</h3>
+                        <p class="feather-line">Sistema de venta con stock aleatorio. Cuando el stock aparece, el más rápido gana.</p>
+                        
+                        <h4 class="feather-line subtitle">Precios Base</h4>
+                        <p class="feather-line price">425 → 4.5$</p>
+                        <p class="feather-line price">575 → 5$</p>
+                        <p class="feather-line price">600 → 6$</p>
+                        <p class="feather-line price">825 → 8$</p>
+                        <p class="feather-line price">1000 → 9$</p>
+                        <p class="feather-line price">1350 → 13$</p>
+                        
+                        <h4 class="feather-line subtitle">Compra segura y rápida</h4>
+                        <p class="feather-line">Para comprar, abre un ticket en el discord y serás atendido de inmediato.</p>
+                        <p class="feather-line warning">¡Stock limitado, aprovecha cuando esté disponible!</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
